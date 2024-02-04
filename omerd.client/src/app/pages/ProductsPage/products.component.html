@@ -1,0 +1,99 @@
+<!--<div class="row">
+  <div class="col-1"></div>
+  <div class="col-10">
+    <div class="row" style="margin-top: 20px">
+      <div class="col-10" style="display:flex;justify-content:space-between">
+        <div class="col-2">
+          Ürünlerde Ara : <input type="text" class="form-control" name="filter" [(ngModel)]="filterProductName" (input)="filterProducts()" />
+        </div>
+        <div class="col-2">
+          Fiyata göre en az : <input type="number" class="form-control" name="filter" [(ngModel)]="filterPrice" (input)="filterProducts()" />
+        </div>
+        <div class="col-2">
+          Stoğa göre en az : <input type="number" class="form-control" name="filter" [(ngModel)]="stockQuantity" (input)="filterProducts()" />
+        </div>
+        <div class="col-2">
+          Puana göre en az : <input type="number" class="form-control" name="filter" [(ngModel)]="star" (input)="filterProducts()" />
+        </div>
+        <div class="col-2">
+          Eklenme tarihine göre : <input type="date" class="form-control" name="filter" [(ngModel)]="createDate" (change)="filterProducts()" />
+        </div>
+      </div>
+      </div>
+    </div>
+  <div class="row" style="margin-top: 25px; display: flex; justify-content: space-between">
+    <div class="col-1"></div>
+    <div class="col-10" style="display: flex; flex-wrap: wrap;">
+      <ng-container *ngFor="let product of allProducts; let i = index">
+        <div class="card" style="width: 18rem; border-radius: 20px; margin-left: 10px;">
+          <img class="card-img-top" [src]="product.productPhotoUrl" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{product.productName}}</h5>
+            <p class="card-text">{{product.star}}/5</p>
+            <p class="card-text">{{product.stockQuantity}} adet stokta </p>
+            <p class="card-text">{{product.price}} ₺ </p>
+              <a class="btn btn-primary" (click)="addToCart(product.productID)">Sepete Ekle</a>
+          </div>
+        </div>
+
+        <div *ngIf="(i + 1) % 4 === 0" class="w-100" style="margin-top: 25px;"></div>
+      </ng-container>
+    </div>
+    <div class="col-1"></div>
+
+  </div>
+  </div>
+  <div class="col-1"></div>-->
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-center mb-4">Ürünler</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <input type="text" class="form-control" placeholder="Ürünlerde Ara" [(ngModel)]="filterProductName" (input)="filterProducts()">
+        </div>
+        <div class="col-md-2">
+          <input type="number" class="form-control" placeholder="Fiyata göre en az" [(ngModel)]="filterPrice" (input)="filterProducts()">
+        </div>
+        <div class="col-md-2">
+          <input type="number" class="form-control" placeholder="Stoğa göre en az" [(ngModel)]="stockQuantity" (input)="filterProducts()">
+        </div>
+        <div class="col-md-2">
+          <input type="number" class="form-control" placeholder="Puana göre en az" [(ngModel)]="star" (input)="filterProducts()">
+        </div>
+        <div class="col-md-2">
+          <input type="date" class="form-control" [(ngModel)]="createDate" (change)="filterProducts()">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-12">
+      <div class="row g-4">
+        <ng-container *ngFor="let product of allProducts; let i = index">
+          <div class="col-md-3">
+            <div class="card product-card">
+              <img class="card-img-top" [src]="product.productPhotoUrl" alt="Ürün görseli">
+              <div class="card-body">
+                <h5 class="card-title">{{product.productName}}</h5>
+                <p class="card-text">
+                  <span class="star-rating">{{product.star}} / 5</span>
+                  {{product.stockQuantity}} adet stokta
+                </p>
+                <p class="card-text fiyat">{{product.price}} ₺</p>
+                <button class="btn btn-primary" (click)="addToCart(product.productID)">Sepete Ekle</button>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,91 @@
+<!--<table *ngIf="cartDatas.length != 0"  style="width:100%;margin-top:30px">
+  <tr>
+    <th>Ürün Fotoğrafı</th>
+    <th>Ürün Adı</th>
+    <th>Adet</th>
+    <th>Ürün Fiyatı</th>
+    <th>Toplam Fiyat</th>
+    <th>&nbsp;</th>
+  </tr>
+  <tr *ngFor="let item of cartDatas">
+    <td><img [src]="item.productPhotoUrl" width="100px" /></td>
+    <td>{{item.productName}}</td>
+    <td>{{item.orderCount}} </td>
+    <td>{{item.productPrice}}</td>
+    <td>{{item.totalPrice}}</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteOrder(item.productID);">Sil</button>
+    </td>
+  </tr>
+</table>
+
+<br /><br /><br />
+
+<button class="btn btn-primary" *ngIf="cartDatas.length != 0" (click)="payment()">Ödemeye Yap</button>
+<button class="btn btn-danger" *ngIf="cartDatas.length != 0" style="margin-left:20px" (click)="deleteCart()">Sepeti Sil</button>
+
+
+<div class="col-12" *ngIf="cartDatas.length == 0">
+  <div class="col-4"></div>
+  <div class="col-4">
+    <h2>Sepetiniz boş görünüyor. Birşeyler ekleyin</h2>
+  </div>
+  <div class="col-4"></div>
+</div>-->
+
+
+<div class="container cart-page">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-center mb-4">Sepetim</h1>
+    </div>
+  </div>
+  <div class="row" *ngIf="cartDatas.length > 0">
+    <div class="col-12">
+      <table class="table table-bordered cart-table">
+        <thead>
+          <tr>
+            <th>Ürün Fotoğrafı</th>
+            <th>Ürün Adı</th>
+            <th>Adet</th>
+            <th>Ürün Fiyatı</th>
+            <th>Toplam Fiyat</th>
+            <th>İşlem</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of cartDatas">
+            <td>
+              <img [src]="item.productPhotoUrl" class="cart-product-img" alt="Ürün görseli">
+            </td>
+            <td>{{item.productName}}</td>
+            <td>{{item.orderCount}}</td>
+            <td>{{item.productPrice}} ₺</td>
+            <td>{{item.totalPrice}} ₺</td>
+            <td>
+              <button class="btn btn-danger btn-sm" (click)="deleteOrder(item.productID)">Sil</button>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4" class="text-right">Sepet Toplamı:</td>
+            <td colspan="2">{{calculateTotalPrice()}} ₺</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div class="col-12 mt-4">
+      <div class="d-flex justify-content-between">
+        <button class="btn btn-primary btn-lg" (click)="payment()">Ödeme Yap</button>
+        <button class="btn btn-danger btn-lg" (click)="deleteCart()">Sepeti Sil</button>
+      </div>
+    </div>
+  </div>
+  <div class="row empty-cart-message" *ngIf="cartDatas.length == 0">
+    <div class="col-12 text-center">
+      <img src="assets/empty-cart.png" alt="Boş sepet" class="mb-4">
+      <h2>Sepetiniz boş görünüyor. Bir şeyler ekleyin!</h2>
+    </div>
+  </div>
+</div>

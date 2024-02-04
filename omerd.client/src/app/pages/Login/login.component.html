@@ -1,0 +1,108 @@
+<!--<div class="row">
+  <div class="col-1"></div>
+  <div class="col-5">
+    <div class="row">
+      <div class="col">
+        <h2>Giriş Yap</h2>
+      </div>
+    </div>
+    <div class="row">
+      <span class="col">Kullanıcı Adı:</span>
+      <span class="col"><input type="text" name="username" [(ngModel)]="userName" /></span>
+    </div>
+    <div class="row">
+      <span class="col">Şifre:</span>
+      <span class="col"><input type="password" name="password" [(ngModel)]="password" /></span>
+    </div>
+    <div class="row">
+      <button class="btn btn-primary" (click)="logIn()" >Giriş Yap</button>
+    </div>
+  </div>
+  <div class="col-5">
+    <div class="row">
+      <div class="col">
+        <h2>Kayıt Ol</h2>
+      </div>
+    </div>
+    <div class="row">
+      <span class="col">Kullanıcı Adı:</span>
+      <span class="col"><input type="text" name="usernameSignIn" [(ngModel)]="userNameSignIn" /></span>
+    </div>
+    <div class="row">
+      <span class="col">Şifre:</span>
+      <span class="col"><input type="password" name="passwordSignIn" [(ngModel)]="passwordSignIn" /></span>
+    </div>
+    <div class="row">
+      <span class="col">Şifre yeniden:</span>
+      <span class="col"><input type="password" name="password2" [(ngModel)]="password2" /></span>
+    </div>
+    <div class="row">
+      <span class="col">E-mail:</span>
+      <span class="col"><input type="email" name="email" [(ngModel)]="email" /></span>
+    </div>
+    <div class="row">
+      <span class="col">Adres:</span>
+      <span class="col"><input type="text" name="adress" [(ngModel)]="adress" /></span>
+    </div>
+  </div>
+</div>-->
+
+
+<div class="container">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-6">
+      <div class="card login-card">
+        <div class="card-header text-center">
+          <h1 class="mb-0">Giriş Yap</h1>
+          <p class="small">Hesabınız var mı? Hemen giriş yapın!</p>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label for="username">Kullanıcı Adı:</label>
+              <input type="text" class="form-control" id="username" name="username" [(ngModel)]="userName">
+            </div>
+            <div class="form-group">
+              <label for="password">Şifre:</label>
+              <input type="password" class="form-control" id="password" name="password" [(ngModel)]="password">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" (click)="logIn()">Giriş Yap</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card signup-card">
+        <div class="card-header text-center">
+          <h1 class="mb-0">Kayıt Ol</h1>
+          <p class="small">Hesabınız yok mu? Hemen kaydolun!</p>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label for="usernameSignIn">Kullanıcı Adı:</label>
+              <input type="text" class="form-control" id="usernameSignIn" name="usernameSignIn" [(ngModel)]="userNameSignIn">
+            </div>
+            <div class="form-group">
+              <label for="passwordSignIn">Şifre:</label>
+              <input type="password" class="form-control" id="passwordSignIn" name="passwordSignIn" [(ngModel)]="passwordSignIn">
+            </div>
+            <div class="form-group">
+              <label for="password2">Şifre Tekrar:</label>
+              <input type="password" class="form-control" id="password2" name="password2" [(ngModel)]="password2">
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail:</label>
+              <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email">
+            </div>
+            <div class="form-group">
+              <label for="adress">Adres:</label>
+              <input type="text" class="form-control" id="adress" name="adress" [(ngModel)]="adress">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" (click)="register()">Kayıt Ol</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

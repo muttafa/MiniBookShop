@@ -1,0 +1,46 @@
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.navbar-brand {
+  position: relative;
+  float: left;
+}
+
+.navbar-item {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+  float: inline-start
+}
+
+.navbar-item:hover {
+  background-color: #555;
+  cursor: pointer
+}
+
+.navbar-burger {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.navbar-menu {
+  clear: both;
+}
+
+.shop {
+  float: inline-end;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+.shop:hover {
+  background-color: #555;
+  cursor: pointer
+}

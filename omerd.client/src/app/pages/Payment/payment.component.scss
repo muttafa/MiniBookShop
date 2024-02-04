@@ -1,0 +1,32 @@
+.payment-form {
+  padding: 50px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+.payment-form h2 {
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.payment-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.payment-form input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.payment-form button {
+  font-weight: bold;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}

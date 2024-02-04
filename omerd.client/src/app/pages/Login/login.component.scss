@@ -1,0 +1,65 @@
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  border-radius: 5px;
+  box-shadow: none;
+  border-color: #ddd;
+  height: 44px;
+}
+
+.form-control:focus {
+  border-color: #28a745;
+}
+
+.btn-primary {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  height: 44px;
+}
+
+.btn-primary:hover {
+  background-color: #1e7e34;
+  border-color: #1e7e34;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .col-md-6 {
+    width: 100%;
+  }
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.login-card, .signup-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-card .card-header, .signup-card .card-header {
+  background-color: #28a745;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.login-card .card-body, .signup-card .card-body {
+  padding: 40px;
+}

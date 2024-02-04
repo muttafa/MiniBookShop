@@ -1,0 +1,2 @@
+C:\Users\mucar\Desktop\Eticaret\omerd\omerd.client\obj\Debug\omerd.client.esproj.CoreCompileInputs.cache
+C:\Users\mucar\Desktop\omerd\omerd.client\obj\Debug\omerd.client.esproj.CoreCompileInputs.cache

@@ -1,0 +1,45 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.carousel .carousel-item img {
+  height: 400px; /* Adjust as needed */
+  object-fit: cover;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #333;
+  opacity: 0.8;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+.carousel-indicators {
+  bottom: -30px; /* Adjust as needed */
+}
+
+.carousel-indicators li {
+  background-color: #ccc;
+  border: none;
+}
+
+.carousel-indicators .active {
+  background-color: #333;
+}
+
+/* Additional styling for headers and spacing */
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.my-4 {
+  margin-bottom: 24px;
+}

@@ -1,0 +1,12 @@
+<nav *ngIf="userID" class="navbar">
+
+  <div id="navbarMenu" class="navbar-menu">
+    <div class="navbar-start">
+      <a [routerLink]="['anasayfa', userID]"  class="navbar-item">Ana Sayfa</a>
+      <a [routerLink]="['products', userID]" class="navbar-item">Ürünler</a>
+      <a [routerLink]="['cart', userID]" class="shop">Sepet</a>
+    </div>
+  </div>
+</nav>
+
+

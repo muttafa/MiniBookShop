@@ -1,0 +1,73 @@
+<!--<div class="row" style="margin-top: 30px">
+
+    <div class="col-3">&nbsp;</div>
+    <div class="col-6">
+      <div>
+        <span>
+          Kartın üzerindeki isim :
+        </span>
+        <span>
+          <input class="form-control" type="text" name="name" [(ngModel)]="kartName" required/>
+        </span>
+      </div>
+      <div>
+        <span>
+          Kart No :
+        </span>
+        <span>
+          <input class="form-control" type="text" name="name"  [(ngModel)]="KartNo" required/>
+        </span>
+      </div>
+      <div>
+        <span>
+          Son Kullanma Tarihi :
+        </span>
+        <span>
+          <input class="form-control" type="text" name="name"  [(ngModel)]="expirationDate" required/>
+        </span>
+      </div>
+      <div>
+        <span>
+          CVV :
+        </span>
+        <span>
+          <input class="form-control" type="text" name="name"  [(ngModel)]="CVV" required/>
+        </span>
+      </div>
+      <button class="btn btn-success" style="margin-top:30px" (click)="submitOrder()">Siparişi Ver</button>
+
+    </div>
+    <div class="col-3"></div>
+
+</div>-->
+
+
+
+<div class="container payment-form">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h2 class="text-center mb-4">Ödeme Bilgileri</h2>
+      <form>
+        <div class="form-group">
+          <label for="kartName">Kartın Üzerindeki İsim</label>
+          <input type="text" class="form-control" id="kartName" name="kartName" [(ngModel)]="kartName" required>
+        </div>
+        <div class="form-group">
+          <label for="kartNo">Kart Numarası</label>
+          <input type="text" class="form-control" id="kartNo" name="kartNo" [(ngModel)]="KartNo" required>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6">
+            <label for="expirationDate">Son Kullanma Tarihi</label>
+            <input type="text" class="form-control" id="expirationDate" name="expirationDate" [(ngModel)]="expirationDate" required>
+          </div>
+          <div class="col-md-6">
+            <label for="cvv">CVV</label>
+            <input type="text" class="form-control" id="cvv" name="cvv" [(ngModel)]="CVV" required>
+          </div>
+        </div>
+        <button type="button" class="btn btn-success btn-lg btn-block mt-4" (click)="submitOrder()">Siparişi Ver</button>
+      </form>
+    </div>
+  </div>
+</div>
