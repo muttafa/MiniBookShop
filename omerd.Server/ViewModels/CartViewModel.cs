@@ -7,10 +7,6 @@
     }
 
 
-    /* 
-     
-     remove item from cart
-     */
     public class RemoveItem
     {
         public int productID { get; set; }
